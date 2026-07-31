@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
      --------------------------------------------------- */
   const typingText = document.getElementById('typingText');
   const typingCursor = document.getElementById('typingCursor');
-  const fullHeadline = 'Someone prepared something special for you 🌸';
+  const fullHeadline = 'I prepared something special for you 🌸';
   let typeIndex = 0;
 
   function typeHeadline(){
@@ -93,11 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const letterClose = document.getElementById('letterClose');
   const letterBody = document.getElementById('letterBody');
 
-  const letterMessage = `I just wanted to brighten your day.
-Thank you for being such an amazing friend.
+  const letterMessage = ` Thank you for being such an amazing friend.
 I hope this bouquet makes you smile.
-Keep shining and never forget how appreciated you are.
-Have a wonderful day! 🌸`;
+Keep shining and never forget how gorgeous and cute you are.
+Have a wonderful night buddy! 🌸`;
 
   let letterTyped = false;
 
