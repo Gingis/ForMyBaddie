@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>A Bouquet For You Baddie🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient floating layer: petals, sparkles, hearts, butterflies -->
+  <div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+
+  <!-- Day / Night toggle -->
+  <button class="mode-toggle" id="modeToggle" aria-label="Toggle day and night mode">
+    <span class="mode-icon">🌙</span>
+  </button>
+
+  <!-- ===================== WELCOME SCREEN ===================== -->
+  <section class="screen welcome-screen" id="welcomeScreen">
+    <div class="welcome-card glass">
+      <p class="eyebrow">a little something for you</p>
+      <h1 class="welcome-title">
+        <span class="typing-text" id="typingText"></span><span class="cursor" id="typingCursor">|</span>
+      </h1>
+      <p class="welcome-sub">Take a breath, and open it whenever you're ready.</p>
+      <button class="open-btn" id="openBtn">
+        <span>Open Bouquet</span>
+        <span class="btn-glow"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== BOUQUET SCREEN ===================== -->
+  <section class="screen bouquet-screen" id="bouquetScreen">
+
+    <header class="bouquet-header">
+      <p class="eyebrow">for someone wonderful</p>
+      <h2 class="bouquet-title">A Bouquet, Just For You</h2>
+      <p class="bouquet-hint">tap a flower to see what its saying🌷</p>
+    </header>
+
+    <div class="bouquet-stage">
+      <!-- wrapping paper -->
+      <div class="wrap-paper"></div>
+      <div class="wrap-paper wrap-paper--inner"></div>
+
+      <!-- stems -->
+      <svg class="stems" viewBox="0 0 400 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+        <path class="stem" d="M200 260 C 195 190, 130 160, 90 90" />
+        <path class="stem" d="M200 260 C 198 180, 250 150, 300 80" />
+        <path class="stem" d="M200 260 C 200 170, 200 140, 200 60" />
+        <path class="stem" d="M200 260 C 190 190, 160 150, 140 110" />
+        <path class="stem" d="M200 260 C 210 190, 245 155, 265 115" />
+        <path class="stem" d="M200 260 C 195 195, 175 165, 165 130" />
+        <path class="stem" d="M200 260 C 205 195, 220 165, 235 130" />
+      </svg>
+
+      <!-- ribbon bow -->
+      <div class="ribbon">
+        <div class="ribbon-loop ribbon-loop--left"></div>
+        <div class="ribbon-loop ribbon-loop--right"></div>
+        <div class="ribbon-knot"></div>
+        <div class="ribbon-tail ribbon-tail--left"></div>
+        <div class="ribbon-tail ribbon-tail--right"></div>
+      </div>
+
+      <!-- flowers -->
+      <div class="flowers" id="flowersContainer">
+
+        <button class="flower-slot slot-1" data-flower="rose" data-name="Rose" data-message="Like a rose, our friendship keeps unfolding — a little more beautiful every year. 🌹">
+          <div class="flower rose" data-color="rose-1">
+            <div class="petal-ring outer"></div>
+            <div class="petal-ring middle"></div>
+            <div class="petal-ring inner"></div>
+            <div class="flower-center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-2" data-flower="tulip" data-name="Tulip" data-message="A tulip for the quiet kind of love — the kind that shows up, again and again. 🌷">
+          <div class="flower tulip" data-color="tulip-1">
+            <div class="tulip-petal left"></div>
+            <div class="tulip-petal right"></div>
+            <div class="tulip-petal center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-3" data-flower="daisy" data-name="Daisy" data-message="Simple, honest, and bright — just like the joy you bring into a room. 🌼">
+          <div class="flower daisy" data-color="daisy-1">
+            <div class="daisy-petals">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="daisy-center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-4" data-flower="rose" data-name="Rose" data-message="Every petal is a little reminder: you are so loved, exactly as you are. 🌹">
+          <div class="flower rose" data-color="rose-2">
+            <div class="petal-ring outer"></div>
+            <div class="petal-ring middle"></div>
+            <div class="petal-ring inner"></div>
+            <div class="flower-center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-5" data-flower="tulip" data-name="Tulip" data-message="Standing tall, gentle in color — a small wish for softer, brighter days ahead. 🌷">
+          <div class="flower tulip" data-color="tulip-2">
+            <div class="tulip-petal left"></div>
+            <div class="tulip-petal right"></div>
+            <div class="tulip-petal center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-6" data-flower="daisy" data-name="Daisy" data-message="Cheerful little thing — sending you the same warmth you always give others. 🌼">
+          <div class="flower daisy" data-color="daisy-2">
+            <div class="daisy-petals">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="daisy-center"></div>
+          </div>
+        </button>
+
+        <button class="flower-slot slot-7" data-flower="babysbreath" data-name="Baby's Breath" data-message="The tiny things count too — thank you for all the small kindnesses. ✨">
+          <div class="flower babysbreath">
+            <span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span>
+            <span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span>
+            <span class="bb-dot"></span>
+          </div>
+        </button>
+
+        <!-- filler baby's breath clusters for fullness -->
+        <div class="flower-slot slot-filler filler-1" aria-hidden="true">
+          <div class="flower babysbreath small">
+            <span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span>
+          </div>
+        </div>
+        <div class="flower-slot slot-filler filler-2" aria-hidden="true">
+          <div class="flower babysbreath small">
+            <span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span><span class="bb-dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="letter-btn" id="letterBtn">
+      <span>💌 Read My Message</span>
+    </button>
+
+    <p class="footer-note">made with care, just for you</p>
+  </section>
+
+  <!-- ===================== FLOWER INFO POPUP ===================== -->
+  <div class="flower-popup" id="flowerPopup">
+    <div class="flower-popup-card glass">
+      <button class="popup-close" id="popupClose" aria-label="Close">✕</button>
+      <div class="popup-flower-preview" id="popupFlowerPreview"></div>
+      <h3 id="popupFlowerName">Rose</h3>
+      <p id="popupFlowerMessage">Message goes here</p>
+    </div>
+  </div>
+
+  <!-- ===================== LOVE LETTER MODAL ===================== -->
+  <div class="letter-overlay" id="letterOverlay">
+    <div class="letter-envelope" id="letterEnvelope">
+      <div class="envelope-back"></div>
+      <div class="letter-paper" id="letterPaper">
+        <button class="popup-close letter-close" id="letterClose" aria-label="Close">✕</button>
+        <p class="letter-greeting">Hi!🌸</p>
+        <p class="letter-body" id="letterBody"></p>
+        <p class="letter-signoff">With love,<br>ZED</p>
+      </div>
+      <div class="envelope-flap"></div>
+    </div>
+  </div>
+
+  <!-- ===================== FINAL SURPRISE ===================== -->
+  <div class="final-surprise" id="finalSurprise">
+    <div class="final-message glass">
+      <p>You deserve all the flowers in the world</p>
+      <span>💐</span>
+    </div>
+  </div>
+
+  <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
